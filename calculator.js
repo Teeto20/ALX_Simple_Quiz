@@ -17,27 +17,27 @@ document.getElementById("add").addEventListener("click", () => {
   const number1 = parseFloat(document.getElementById("number1").value) || 0;
   const number2 = parseFloat(document.getElementById("number2").value) || 0;
   const result = add(number1, number2);
-  document.getElementById('calculation-result').innerText = `Result: ${result}`;
+  document.getElementById('calculation-result').innerText = result;
 });
 document.getElementById("subtract").addEventListener("click", () => {
   const number1 = parseFloat(document.getElementById("number1").value) || 0;
   const number2 = parseFloat(document.getElementById("number2").value) || 0;
   const result = subtract(number1, number2);
-  document.getElementById('calculation-result').innerText = `Result: ${result}`;
+  document.getElementById('calculation-result').textContent = result;
 });
 document.getElementById("multiply").addEventListener("click", () => {
   const number1 = parseFloat(document.getElementById("number1").value) || 0;
   const number2 = parseFloat(document.getElementById("number2").value) || 0;
   const result = multiply(number1, number2);
-  document.getElementById("calculation-result").innerText = `Result: ${result}`;
+  document.getElementById("calculation-result").textContent = result;
 });
 document.getElementById("divide").addEventListener("click", () => {
   const number1 = parseFloat(document.getElementById("number1").value) || 0;
   const number2 = parseFloat(document.getElementById("number2").value) || 0;
   try {
     const result = divide(number1, number2);
-    document.getElementById("calculation-result").innerText = `Result: ${result}`;
+    document.getElementById("calculation-result").textContent = result;
   } catch (error) {
-    document.getElementById("calculation-result").innerText = error.message;
+    document.getElementById("calculation-result").textContent = error.message;
   }
 });
