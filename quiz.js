@@ -5,7 +5,7 @@ function checkAnswer() {
         alert("Please select an answer before submitting.");
         return;
     }
-    const userAnswer = selectedRadio ? selectedRadio.value : null;
+    const userAnswer = selectedRadio.value ;
     const feedback = document.getElementById("feedback");
     if (userAnswer === correctAnswer) {
         feedback.textContent = "Correct! Well done.";
